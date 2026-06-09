@@ -42,6 +42,7 @@ See `data/about_dataset.md` for full dataset documentation.
 - pyreadstat (for reading Stata DHS files)
 
 ## Repository Structure
+```
 child-malnutrition-nigeria/
 │
 ├── data/
@@ -56,6 +57,7 @@ child-malnutrition-nigeria/
 │   ├── prevalence_by_education.png
 │   └── prevalence_by_age.png
 └── README.md
+```
 
 ## Key Findings
 
