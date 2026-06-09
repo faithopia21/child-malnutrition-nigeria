@@ -176,9 +176,9 @@ python notebooks/malnutrition_analysis.py
 
 ## Author
 
-Faith Olaniyi, LAUTECH Nigeria
-GitHub: github.com/faithopia21
-LinkedIn: linkedin.com/in/faith-oluwanifemi-olaniyi/
+**Faith Olaniyi**  
+Computer Science Graduate | Data Science & AI for Healthcare  
+[LinkedIn](https://www.linkedin.com/in/faith-oluwanifemi-olaniyi) · [GitHub](https://github.com/faithopia21)
 
 ## About the Author
 
