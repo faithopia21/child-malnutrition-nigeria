@@ -295,3 +295,32 @@ print(edu_prev.round(1).to_string())
 
 print("\nPrevalence by Age:")
 print(age_prev.round(1).to_string())
+
+# EXPORT SUMMARY TABLES FOR POWER BI
+base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+exports_dir = os.path.join(base_dir, "data", "exports")
+os.makedirs(exports_dir, exist_ok=True)
+
+# National prevalence
+national_df = pd.DataFrame({
+    'Indicator': labels,
+    'Prevalence': [df_measured[i].mean() * 100 for i in indicators]
+})
+national_df.to_csv(os.path.join(exports_dir, "national_prevalence.csv"), index=False)
+
+# By region
+region_prev.reset_index().to_csv(os.path.join(exports_dir, "prevalence_by_region.csv"), index=False)
+
+# By residence
+residence_prev.reset_index().to_csv(os.path.join(exports_dir, "prevalence_by_residence.csv"), index=False)
+
+# By wealth
+wealth_prev.reset_index().to_csv(os.path.join(exports_dir, "prevalence_by_wealth.csv"), index=False)
+
+# By education
+edu_prev.reset_index().to_csv(os.path.join(exports_dir, "prevalence_by_education.csv"), index=False)
+
+# By age
+age_prev.reset_index().to_csv(os.path.join(exports_dir, "prevalence_by_age.csv"), index=False)
+
+print("\nSummary tables exported to data/exports/")
